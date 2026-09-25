@@ -1,0 +1,10 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0331.jpg,box trùng xe con bên phải làn giữa (x~865 y~343),deleted,Model dự đoán lặp 2 box cho cùng 1 xe; xoá box trùng có confidence thấp theo guideline
+1,frame_0331.jpg,box gộp 2 xe chạy song song (x~442 y~391),deleted,Model vẽ 1 box lớn bao trùm cả 2 xe sát nhau; xoá box gộp giữ 2 box riêng theo quy tắc Hai xe đứng sát nhau
+1,frame_0331.jpg,xe con làn xa phía trên bên trái,added,Xe ở xa có đèn hậu đỏ rõ và thân xe mờ chiều cao > 16px; bổ sung box theo quy tắc xe >= 4 bánh
+1,frame_0182.jpg,box xe tải tiền cảnh (x~608 y~890),edited,Box AI bao trùm cả vệt sáng đèn pha trên mặt đường; thu gọn đáy box ôm sát thân xe theo guideline
+1,frame_0182.jpg,box trùng xe ở làn giữa (IoU 0.53),deleted,Hai box đè lên cùng một thân xe; xoá box phụ có độ tin cậy thấp hơn theo quy tắc chống box trùng
+1,frame_0182.jpg,xe sedan màu tối bị che một phần ở làn trong,added,Nhìn thấy một phần thân xe và đèn; vẽ box cho phần nhìn thấy theo quy tắc xe bị che một phần
+1,frame_0107.jpg,xe SUV ở làn giữa,accepted,Box AI ôm sát thân xe đúng kích thước và ranh giới theo GUIDELINE_LABEL.md
+1,frame_0107.jpg,box trùng lặp xe ở làn trái (IoU 0.58),deleted,Model dự đoán lặp 2 box chồng lên nhau; xoá box trùng thừa theo guideline
+1,frame_0099.jpg,xe bán tải ở gần,edited,Box AI bị lệch lùi ra sau đuôi xe; kéo lại box ôm khít thân xe cả gương và đèn
